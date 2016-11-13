@@ -1,0 +1,7 @@
+# sensors
+allow sensors default_prop:property_service set;
+allow sensors init:unix_stream_socket connectto;
+allow sensors persist_file:file { read write getattr open setattr };
+allow sensors property_socket:sock_file write;
+allow sensors apk_data_file:dir { write remove_name add_name };
+allow sensors apk_data_file:sock_file { create unlink setattr };

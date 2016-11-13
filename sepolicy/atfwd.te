@@ -1,0 +1,2 @@
+# atfwd
+allow atfwd default_prop:property_service set;

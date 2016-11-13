@@ -1,0 +1,6 @@
+# for mounting storage partition with forced context
+allow init media_rw_data_file:filesystem { relabelfrom mount unmount };
+
+# init_shell
+allow init_shell self:process execmem;
+allow init_shell kernel:process setsched;

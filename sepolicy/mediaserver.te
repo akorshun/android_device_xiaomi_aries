@@ -1,0 +1,3 @@
+# Permit mediaserver to create sockets with no specific SELinux class.
+allow mediaserver self:socket create_socket_perms;
+allow mediaserver system_data_file:sock_file write;
