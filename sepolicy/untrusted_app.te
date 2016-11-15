@@ -1,1 +1,12 @@
 allow untrusted_app device:dir { read open };
+allow untrusted_app atfwd_exec:file getattr;
+allow untrusted_app bootanim_exec:file getattr;
+allow untrusted_app btnvtool_exec:file getattr;
+allow untrusted_app clatd_exec:file getattr;
+allow untrusted_app debuggerd_exec:file getattr;
+allow untrusted_app dhcp_exec:file getattr;
+allow untrusted_app diag_exec:file getattr;
+allow untrusted_app dnsmasq_exec:file getattr;
+allow untrusted_app drmserver_exec:file getattr;
+allow untrusted_app dumpstate_exec:file getattr;
+allow untrusted_app logd_exec:file getattr;
