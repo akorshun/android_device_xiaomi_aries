@@ -291,5 +291,7 @@ PRODUCT_COPY_FILES += \
 # This is the aries-specific audio package
 $(call inherit-product, frameworks/base/data/sounds/AudioPackage10.mk)
 
+$(call project-set-path,qcom-audio,device/xiaomi/aries/audio)
+
 $(call inherit-product, hardware/qcom/msm8960/msm8960.mk)
 $(call inherit-product, frameworks/native/build/phone-xhdpi-2048-dalvik-heap.mk)
