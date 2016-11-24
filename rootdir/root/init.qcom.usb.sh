@@ -86,17 +86,17 @@ esac
 baseband=`getprop ro.baseband`
 echo 1  > /sys/class/android_usb/f_mass_storage/lun/nofua
 usb_config=`getprop persist.sys.usb.config`
-build_type=`getprop ro.build.type`
+debuggable=`getprop ro.debuggable`
 case "$usb_config" in
     "" | "adb" | "none") #USB persist config not set, select default configuration
         case $target in
             "msm8960" | "msm8974")
                 case "$baseband" in
                     "mdm")
-                         if [ -z "$build_type" -o "$build_type" = "user" ]; then
-                             setprop persist.sys.usb.config mtp
-                         else
+                         if [ -z "$debuggable" -o "$debuggable" = "1" ]; then
                              setprop persist.sys.usb.config mtp,adb
+                         else
+                             setprop persist.sys.usb.config mtp
                          fi
                     ;;
                     "sglte")
@@ -109,10 +109,10 @@ case "$usb_config" in
                          setprop persist.sys.usb.config diag,diag_mdm,diag_mdm2,serial_hsic,serial_hsusb,rmnet_hsic,rmnet_hsusb,mass_storage,adb
                     ;;
                     *)
-                         if [ -z "$build_type" -o "$build_type" = "user" ]; then
-                             setprop persist.sys.usb.config mtp
-                         else
+                         if [ -z "$debuggable" -o "$debuggable" = "1" ]; then
                              setprop persist.sys.usb.config mtp,adb
+                         else
+                             setprop persist.sys.usb.config mtp
                          fi
                     ;;
                 esac
