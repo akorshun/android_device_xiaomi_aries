@@ -247,6 +247,8 @@ PRODUCT_PACKAGES += \
     init.qcom.class_core.sh \
     init.qcom.early_boot.sh \
     init.qcom.rc \
+    init.qcom.sdcard_mixed \
+    init.qcom.sdcard_stdalone \
     init.qcom.sh \
     init.qcom.usb.rc \
     init.qcom.usb.sh \
