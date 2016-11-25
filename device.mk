@@ -249,6 +249,7 @@ PRODUCT_PACKAGES += \
     init.qcom.rc \
     init.qcom.sdcard_mixed \
     init.qcom.sdcard_stdalone \
+    init.qcom.syspart_fixup.sh \
     init.qcom.sh \
     init.qcom.usb.rc \
     init.qcom.usb.sh \
@@ -257,13 +258,19 @@ PRODUCT_PACKAGES += \
 
 # Init scripts in /etc
 PRODUCT_PACKAGES += \
-    init.qcom.post_boot.sh \
-    init.qcom.fm.sh \
+    init.ath3k.bt.sh \
+    init.crda.sh \
+    init.qcom.audio.sh \
     init.qcom.bt.sh \
     init.qcom.btdun.sh \
+    init.qcom.coex.sh \
+    init.qcom.fm.sh \
     init.qcom.mdm_links.sh \
     init.qcom.modem_links.sh \
-    init.qcom.syspart_fixup.sh
+    init.qcom.post_boot.sh \
+    init.qcom.sdio.sh \
+    init.qcom.wifi.sh \
+    usf_post_boot.sh
 
 PRODUCT_DEFAULT_PROPERTY_OVERRIDES += \
     camera2.portability.force_api=1
